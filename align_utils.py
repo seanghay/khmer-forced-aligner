@@ -84,7 +84,7 @@ def load_model_dict():
         print("Model path already exists. Skipping downloading....")
     else:
         torch.hub.download_url_to_file(
-            "https://dl.fbaipublicfiles.com/mms/torchaudio/ctc_alignment_mling_uroman/model.pt",
+            "https://huggingface.co/seanghay/khmer-forced-aligner/resolve/main/ctc_alignment_mling_uroman_model.pt",
             model_path_name,
         )
         assert os.path.exists(model_path_name)
