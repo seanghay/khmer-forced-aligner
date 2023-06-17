@@ -4,7 +4,15 @@ Adapted from [facebookresearch/fairseq](https://github.com/facebookresearch/fair
 git clone --recursive https://github.com/seanghay/khmer-forced-aligner.git
 ```
 
-Inference
+## Inference
+
+Resample the audio to be 16kHz
+
+```
+ffmpeg -i input_audio.ogg -ar 16000 -ac 1 -c:a pcm_s16le audio.wav
+```
+
+Align
 
 ```
 python align_and_segment.py \
